@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link th:href="@{/css/estilo1.css}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <!--header logo-->
+            <div id="header">
+                <div id="logo">
+                  
+                </div>
+                <!--header menu de inicio-->
+                <nav id="menu">
+                    <ul>
+                        <li> <a th:href="@{/}">Inicio</a></li>
+                        <li> <a th:href="@{/listar}">Listar</a></li>
+                        <li> <a th:href="@{/nuevoJuego}">Modificar</a></li>
+                        <li> <a th:href="@{/nuevaConsulta}">Contactenos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="CentrarCajas">
+            <div class="caja">
+                <img class="CajaImg" src="images/ps5.jpg">
+                <h2 class="titulo">PlayStation®5</h2>
+                <p class="descripcion">Experimenta una velocidad sorprendente con una SSD de velocidad ultrarrápida, una inmersión más profunda con soporte para respuesta háptica, gatillos adaptables y audio 3D1, además de una generación completamente nueva de juegos de PlayStation.</p>
+                <input class="botoncomprar" type="submit" name="comprar" value="472,50€ Comprar">
+            </div>
+
+            <div class="caja">
+                <img class="CajaImg" src="images/xbox.jpg">
+
+                <h2 class="titulo">Xbox Series X</h2>
+                <p class="descripcion">La Xbox más rápida y potente de la historia,Disfruta de una velocidad y rendimiento de nueva generación. Juega a miles de títulos de cuatro generaciones de consolas: todos los juegos tienen el mejor aspecto y se juegan mejor en Xbox Series X.</p>
+                <input class="botoncomprar" type="submit" name="comprar" value="499,99€ Comprar">
+            </div>
+
+            <div class="caja">
+                <img class="CajaImg" src="images/comingsoon.jpg">
+                <h2 class="titulo">Titulo</h2>
+                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ratione distinctio beatae dolores veniam nisi, dolore odio reiciendis quos amet neque recusandae atque at, praesentium repellendus error. Vel, voluptatibus, nihil!</p>
+                <input class="botoncomprar" type="submit" name="comprar" value="Muy Pronto">
+            </div>
+
+            <div class="caja">
+                <img class="CajaImg" src="images/comingsoon.jpg">
+                <h2 class="titulo">Titulo</h2>
+                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ratione distinctio beatae dolores veniam nisi, dolore odio reiciendis quos amet neque recusandae atque at, praesentium repellendus error. Vel, voluptatibus, nihil!</p>
+                <input class="botoncomprar" type="submit" name="comprar" value="Muy Pronto">
+            </div>
+        </div>
+    </body>
+</html>

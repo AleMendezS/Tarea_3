@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Modifica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/estilo1.css}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+        <!--header logo-->
+        <div id="header">
+            <div id="logo">
+                
+            </div>
+        <!--header menu de inicio-->
+<nav id="menu">
+        <ul>
+        <li> <a th:href="@{/index}">Inicio</a></li>
+                        <li> <a th:href="@{/listar}">Listar</a></li>
+                        <li> <a th:href="@{/nuevoJuego}">Modificar</a></li>
+                        <li> <a th:href="@{/nuevaConsulta}">Contactenos</a></li>
+        </ul>
+        </nav>
+        </div>
+    </header>
+   <br>
+         <h2>Juegos</h2>
+        <br>
+       
+        <form th:action="@{/guardarJuego}"
+              method="post"
+              th:object="${juego}">
+            <input type="hidden" name ="idJuego" th:field="*{idJuego}"/>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" th:field="*{nombre}">
+            <br>
+            <label for="precio">Precio</label>
+            <input type="text" name="precio" th:field="*{precio}">
+            <br>
+            <label for="disponible">Disponible</label>
+            <input type="text" name="disponible" th:field="*{disponible}">
+           <br>
+            <input type="submit" name="guardar"  value="Guardar"/>
+        </form>
+    </body>
+</html>

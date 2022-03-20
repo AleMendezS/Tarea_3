@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/estilo1.css}" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       <header>
+        <!--header logo-->
+        <div id="header">
+            <div id="logo">
+                
+            </div>
+        <!--header menu de inicio-->
+<nav id="menu">
+        <ul>
+        <li> <a th:href="@{/index}">Inicio</a></li>
+                        <li> <a th:href="@{/listar}">Listar</a></li>
+                        <li> <a th:href="@{/nuevoJuego}">Modificar</a></li>
+                        <li> <a th:href="@{/nuevaConsulta}">Contactenos</a></li>
+        </ul>
+        </nav>
+        </div>
+    </header>
+   <br>
+        <div th:if="${juegoDB != null and !juegoDB.empty}">
+            <table border="1">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Dsiponible</td>
+
+                </tr>
+                <tr th:each="item : ${juegoDB}">
+                    <td th:text="${item.nombre}"></td>
+                    <td th:text="${item.precio}"></td>
+                    <td th:text="${item.disponible}"></td>
+
+                    <td><a th:href="@{/modificarJuego/} + ${item.idJuego}">Modificar</a></td>
+                    <td><a th:href="@{/eliminarJuego/} + ${item.idJuego}">Eliminar</a></td>
+
+                </tr>
+            </table>
+        </div>
+        <div th:if="${juegoDB == null or juegoDB.empty}">
+            La lista de clientes esta vacia
+        </div>
+    </body>
+</html>
