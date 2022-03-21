@@ -70,12 +70,12 @@ public class IndexController {
     @PostMapping("/guardarJuego")
     public String guardarJuego(Juego juego) {
         juegoService.save(juego);
-        return "redirect:/";
+        return "redirect:/listar";
     }
 
     @GetMapping("/eliminarJuego/{idJuego}")
-    public String eliminarCliente(Juego juego) {
+    public String eliminarJuego(Juego juego) {
         juegoService.delete(juego);
-        return "redirect:/";
+        return "redirect:/listar";
     }
 }

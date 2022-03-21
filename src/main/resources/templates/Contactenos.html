@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css/estilo1.css}" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/css/estilo3.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header>
@@ -25,5 +26,26 @@
                 </nav>
             </div>
         </header>
+        <br>
+        <div class="label">
+            <form th:action="@{/guardarConsulta}"
+                  method="post"
+                  th:object="${consulta}">
+                <input type="hidden" name ="idConsulta" th:field="*{idConsulta}"/>
+                <br>
+                <br>
+                <br>
+                <br>
+                <label id="lab1" for="correo">Correo:</label>
+                <input type="text" name="correo" th:field="*{correo}">
+                <br>
+                <br>
+                <label for="consulta">Consulta:</label>
+                <input type="text" name="consulta" th:field="*{consulta}">
+                <br>
+                <br>
+                <input type="submit" name="enviar"  value="ENVIAR"/>
+            </form>
+        </div>
     </body>
 </html>

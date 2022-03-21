@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css/estilo1.css}" rel="stylesheet" type="text/css"/>
+         <link th:href="@{/css/estilo3.css}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
        <header>
@@ -26,8 +27,9 @@
         </div>
     </header>
    <br>
+   <div>
         <div th:if="${juegoDB != null and !juegoDB.empty}">
-            <table border="1">
+            <table class="label" border="2" >
                 <tr>
                     <td>Nombre</td>
                     <td>Precio</td>
@@ -45,6 +47,7 @@
                 </tr>
             </table>
         </div>
+   </div>
         <div th:if="${juegoDB == null or juegoDB.empty}">
             La lista de clientes esta vacia
         </div>
